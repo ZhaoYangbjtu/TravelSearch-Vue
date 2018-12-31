@@ -24,22 +24,20 @@ export default {
 
     methods: {
         searchPlaces(){
-            this.$emit("test", '我是子元素传过来的')
+
             let latitude = 34.0237495
             let longitude = -118.2903984
-            let url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+latitude+','+longitude+'&radius='+this.distance+'&type='+this.category+'&keyword='+this.keyword+'&key=AIzaSyAt4bmRzAJ7Gb91HAXxouXDWS1NJdGxtl4'
+            let url = 'http://yang923nodejs.us-west-1.elasticbeanstalk.com/request_nearby_places?category=default&distance=16093.44&keyword=usc&latitude=34.0021&longitude=-118.282'
             console.log(this.keyword+this.category+this.distance);
- //            fetch(url).then(
- //                function(response) { 
- //                    console.log(response);
- //                    this.$emit('test', '我是子元素传过来的')
-
- //                // handle HTTP response
- //                }, 
- //                function(error) {
- // // handle network error
- //                }
- //            )
+            self = this
+            fetch(url).then(function(response){
+                return response.json();
+            }).then(function(data){
+                console.log(data)
+                self.$emit("places", data)
+            }).catch(function(e){
+                console.log("error")
+            })
         },
         clearForm(){
             this.keyword = ""

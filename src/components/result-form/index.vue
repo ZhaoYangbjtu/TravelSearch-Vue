@@ -3,7 +3,7 @@
 <template>
 
 	<div class="listPosition" id="list">
-		<span >{{placesList}} </span>
+
 		<div class="container col-sm-12 col-lg-9  mb-2">
 			<div class="clearfix">
 				<button type="button" id="existDetail" class="btn btn-light float-right" @click="showExistDetail()" disabled>Details <span class="fas fa-chevron-right"></span></button><!--detail button-->

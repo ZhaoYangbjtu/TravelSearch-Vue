@@ -2,7 +2,7 @@
 
 export default {
 
-    props : ['placesList'],
+    props : ['placeLists'],
     components: {
 
     },
@@ -19,7 +19,7 @@ export default {
 
     methods: {
         requestPlaceDetail(placeId){
-            let url = 
+
             console.log(placeId);
             var p = new Promise(function(resolve, reject){
         //做一些异步操作
@@ -28,13 +28,17 @@ export default {
                     resolve('随便什么数据1');
                 }, 1000);
             });
-            
-            fetch(url, options).then(function(response) { 
-                // handle HTTP response
-                }, function(error) {
- // handle network error
-                }
-            )
+            let url = 'http://yang923nodejs.us-west-1.elasticbeanstalk.com/request_place_detail?id='+placeId;
+            var self = this
+
+            fetch(url).then(function(response){
+                return response.json();
+            }).then(function(data){
+                console.log(data)
+                self.$emit("detail", data.result)
+            }).catch(function(e){
+                console.log("error")
+            })
         }
         
 

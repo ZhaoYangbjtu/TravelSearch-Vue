@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <span>{{name}} </span>
-    <SearchForm @test = "test" />
-    <ResultForm :placesList = "name"/>
-    <DetailForm />
+
+    <SearchForm @places = "getPlaceLists" />
+    <ResultForm :placeLists = "placeLists" @detail="getPlaceDetail"/>
+    <DetailForm :placeDetail = "placeDetail"/>
   </div>
 </template>
 
@@ -17,26 +17,33 @@ import DetailForm from './components/detail-form/index.vue'
 export default {
   name: 'app',
   data() {
-    return {
-      name : "123"
-    }
+      return {
+          placeLists : "123",
+          placeDetail : ""
+
+      }
 
   },
   components: {
     SearchForm,
     ResultForm,
     DetailForm
-    
+
   },
   mounted() {
 
 
   },
   methods : {
-    test: function (a) {
-      this.name = a ;
+    getPlaceLists: function (data) {
+        this.placeLists = data.results;
+
+    },
+    getPlaceDetail: function (data) {
+        this.placeDetail = data ;
 
     }
+
   } 
 }
 </script>
