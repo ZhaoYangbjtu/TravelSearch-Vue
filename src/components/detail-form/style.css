@@ -1,3 +1,15 @@
-.detailPosition{
-	display: block;
-}
+	.detailPosition{
+		display: block;
+	}
+	.detail-enter-active, .detail-leave-active {
+		transition: all linear 1s;
+
+	}
+	.detail-enter  {
+		transform: translateX(-1000px);
+		opacity: 0;
+	}
+	.detail-leave-to {
+		transform: translateX(1000px);
+		opacity: 0;
+	}

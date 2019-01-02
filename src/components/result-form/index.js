@@ -39,6 +39,9 @@ export default {
             }).catch(function(e){
                 console.log("error")
             })
+        },
+        showDetail(){
+            this.$emit("showDetail", "true");
         }
         
 

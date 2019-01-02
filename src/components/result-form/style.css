@@ -116,5 +116,17 @@
 		overflow: hidden;
 		width: 0;
 	}
+	.list-enter-active, .list-leave-active {
+		transition: all linear 1s;
+
+	}
+	.list-enter  {
+		transform: translateX(-1000px);
+		opacity: 0;
+	}
+	.list-leave-to {
+		transform: translateX(1000px);
+		opacity: 0;
+	}
 
 

@@ -2,8 +2,8 @@
   <div id="app">
 
     <SearchForm @places = "getPlaceLists" />
-    <ResultForm :placeLists = "placeLists" @detail="getPlaceDetail"/>
-    <DetailForm :placeDetail = "placeDetail"/>
+    <ResultForm v-if = "showSearchResult" :placeLists = "placeLists" @detail="getPlaceDetail" @showDetail = "showExistDetail"/>
+    <DetailForm v-if = "showDetail" :placeDetail = "placeDetail" @showSearchResult = "showExistSearchResult"/>
   </div>
 </template>
 
@@ -19,7 +19,9 @@ export default {
   data() {
       return {
           placeLists : "123",
-          placeDetail : ""
+          placeDetail : "",
+          showSearchResult : false,
+          showDetail : false
 
       }
 
@@ -37,12 +39,26 @@ export default {
   methods : {
     getPlaceLists: function (data) {
         this.placeLists = data.results;
+        this.showSearchResult = true;
+        this.showDetail = false;
 
     },
     getPlaceDetail: function (data) {
         this.placeDetail = data ;
+        this.showSearchResult = false;
+        this.showDetail = true;
 
+    },
+    showExistSearchResult: function (data){
+        this.showSearchResult = true;
+        this.showDetail = false;
+    },
+    showExistDetail: function (data){
+        this.showSearchResult = false;
+        this.showDetail = true;
     }
+
+
 
   } 
 }
