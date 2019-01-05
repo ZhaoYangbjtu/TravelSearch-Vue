@@ -55,9 +55,6 @@
 	.d-flex{
 		height:auto;
 	}
-	#progressBar{
-		display:none;
-	}
 	#list{
 		display:none;
 	}

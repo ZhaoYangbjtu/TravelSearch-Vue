@@ -11,16 +11,18 @@ export default {
     data() {
         return {
 
-            photoUrl : "https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyAt4bmRzAJ7Gb91HAXxouXDWS1NJdGxtl4&maxwidth=750&photoreference="
+            photoUrl : "https://maps.googleapis.com/maps/api/place/photo?key=AIzaSyAt4bmRzAJ7Gb91HAXxouXDWS1NJdGxtl4&maxwidth=750&photoreference=",
+            address : this.placeDetail.formatted_address,
+            phone : this.placeDetail.formatted_phone_number,
+            price : this.placeDetail.price_level,
+            rate : this.placeDetail.rating,
+            googlePage : this.placeDetail.url,
+            website : this.placeDetail.website
 
         }
     },
 
-    mounted() {
 
-
-
-    },
 
     methods: {
         showSearchResult(){
@@ -44,9 +46,32 @@ export default {
             directionsDisplay.setMap(map);
             directionsDisplay.setPanel(document.getElementById('routeInformation'));
             console.log("初始化地图");
+            this.calculateAndDisplayRoute(directionsService, directionsDisplay);
+            console.log("初始化路线")
+        },
+        calculateAndDisplayRoute(directionsService, directionsDisplay) {
+            var start = 'chicago, il';
+            var end = 'st louis, mo';
+            directionsService.route({
+                origin: start,
+                destination: end,
+                travelMode: 'DRIVING'
+            }, function(response, status) {
+                if (status === 'OK') {
+                    directionsDisplay.setDirections(response);
+                } else {
+                    window.alert('Directions request failed due to ' + status);
+                }
+            });
         }
         
 
-    }
+    },
+    mounted() {
+        this.initMap()
+
+
+
+    },
 
 }

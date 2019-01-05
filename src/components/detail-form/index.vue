@@ -39,19 +39,19 @@
 								<tbody>
 									<tr>
 										<th scope="row">Address</th>
-										<td>6750 Sunset Blvd, Los Angeles, CA 90028美国</td>
+										<td>{{address}}</td>
 									</tr>
 									<tr>
 										<th scope="row">Phone Address</th>
-										<td>+1 323-464-2455</td>
+										<td>{{phone}}</td>
 									</tr>
 									<tr>
 										<th scope="row">Price Level</th>
-										<td><span>$</span></td>
+										<td><span>{{price}}</span></td>
 									</tr>
 									<tr>
 										<th scope="row">Rating</th>
-										<td>4.3
+										<td>{{rate}}
 											<div class="stars-outer">
 												<div class="stars-inner" style="width:77.39999999999999px;"><svg class="svg-inline--fa fa-star fa-w-18 fa-1x" style="color: #FF8C00;z-index: -1;" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <span class="fas fa-star fa-1x" style="color:#FF8C00;z-index:-1;"></span> --><svg class="svg-inline--fa fa-star fa-w-18 fa-1x" style="color: #FF8C00;z-index: -1;" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <span class="fas fa-star fa-1x" style="color:#FF8C00;z-index:-1;"></span> --><svg class="svg-inline--fa fa-star fa-w-18 fa-1x" style="color: #FF8C00;z-index: -1;" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <span class="fas fa-star fa-1x" style="color:#FF8C00;z-index:-1;"></span> --><svg class="svg-inline--fa fa-star fa-w-18 fa-1x" style="color: #FF8C00;z-index: -1;" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <span class="fas fa-star fa-1x" style="color:#FF8C00;z-index:-1;"></span> --><svg class="svg-inline--fa fa-star fa-w-18 fa-1x" style="color: #FF8C00;z-index: -1;" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <span class="fas fa-star fa-1x" style="color:#FF8C00;z-index:-1;"></span> -->
 												</div>
@@ -60,11 +60,11 @@
 									</tr>
 									<tr>
 										<th scope="row">Google Page</th>
-										<td><a target="_blank" href="https://maps.google.com/?cid=7298462879195094883">https://maps.google.com/?cid=7298462879195094883</a></td>
+										<td><a target="_blank" href="https://maps.google.com/?cid=7298462879195094883">{{googlePage}}</a></td>
 									</tr>
 									<tr>
 										<th scope="row">Website</th>
-										<td><a target="_blank" href="http://www.chick-fil-a.com/hollywooddt">http://www.chick-fil-a.com/hollywooddto</a></td>
+										<td><a target="_blank" href="http://www.chick-fil-a.com/hollywooddt">{{website}}</a></td>
 									</tr>
 									<tr>
 										<th scope="row">Hours</th>
